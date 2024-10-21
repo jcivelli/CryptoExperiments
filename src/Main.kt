@@ -7,7 +7,7 @@ import javax.crypto.Mac
 import javax.crypto.spec.SecretKeySpec
 
 /**
- * Provides a way to do encryption related operations from the command line, such as hmac.
+ * Provides a way to do encryption related operations from the command line, such as hmac..
  */
 fun encodeBytesToString(bytes : ByteArray) : String {
     return HexFormat.of().formatHex(bytes)
