@@ -6,6 +6,9 @@ import javax.crypto.KeyGenerator
 import javax.crypto.Mac
 import javax.crypto.spec.SecretKeySpec
 
+/**
+ * Provides a way to do encryption related operations from the command line.
+ */
 fun encodeBytesToString(bytes : ByteArray) : String {
     return HexFormat.of().formatHex(bytes)
 }
@@ -35,7 +38,7 @@ fun generateMac(key : Key, message : String) : ByteArray {
 fun printUsage() {
     println("Usage: crypto_utils <cmd> <params>\n" +
             "Commands:\n" +
-            "hash <text>\n\tHash the passed in text with SHA-256\n" +
+            "hash <text>\n\tHashes the passed in text with SHA-256\n" +
             "genSymKey\n\tCreates and returns a DES symmetric key, hex encoded.\n" +
             "genHMac <hex encoded key> <message>\n\tReturns a MAC for the given message.\n" +
             "") // TODO: finish with more commands.
