@@ -6,6 +6,9 @@ import javax.crypto.KeyGenerator
 import javax.crypto.Mac
 import javax.crypto.spec.SecretKeySpec
 
+/**
+ * Provides a way to do encryption related operations from the command line.
+ */
 fun encodeBytesToString(bytes : ByteArray) : String {
     return HexFormat.of().formatHex(bytes)
 }
